@@ -223,12 +223,8 @@ public function statistiques() {
     // Total candidats
     $stats['total_candidats'] = $this->pdo->query("SELECT COUNT(*) FROM candidat")->fetchColumn();
     
-    // Nouveaux candidats ce mois
-    $stats['nouveaux_candidats_mois'] = $this->pdo->query("
-        SELECT COUNT(*) FROM candidat 
-        WHERE MONTH(CURDATE()) = MONTH(CURDATE())
-        AND YEAR(CURDATE()) = YEAR(CURDATE())
-    ")->fetchColumn();
+    // Nouveaux candidats ce mois (non disponible : la table candidat n'a pas de colonne date_inscription)
+    $stats['nouveaux_candidats_mois'] = 0;
     
     // Total moniteurs
     $stats['total_moniteurs'] = $this->pdo->query("SELECT COUNT(*) FROM moniteur")->fetchColumn();
@@ -294,9 +290,8 @@ public function statistiques() {
         $date = date('Y-m', strtotime("-$i months"));
         $mois_labels[] = date('M Y', strtotime($date));
         
-        // Compter les inscriptions (simulé car pas de champ date_inscription)
-        // Tu peux ajouter ce champ ou utiliser l'ID comme approximation
-        $inscriptions_data[] = rand(5, 20);
+        // Pas de colonne date_inscription dans la table candidat — données non disponibles
+        $inscriptions_data[] = 0;
     }
     
     // Données pour graphique formules

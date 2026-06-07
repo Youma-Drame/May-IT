@@ -1,9 +1,12 @@
+<?php $currentPage = 'questions-code'; ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Gestion des questions Code</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <?php include 'vue/admin/_sidebar_css.php'; ?>
+    <style>.container { max-width:100%; padding: 0; background: transparent; box-shadow: none; border-radius: 0; } body { padding: 0; }</style>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -158,6 +161,8 @@
     </style>
 </head>
 <body>
+    <?php include 'vue/admin/_sidebar.php'; ?>
+    <div class="main-content">
     <div class="container">
         <a href="index.php?page=admin" class="back-btn">
             <i class="fas fa-arrow-left"></i> Retour au tableau de bord
@@ -236,6 +241,7 @@
                 <?php endforeach; ?>
             </div>
         <?php endif; ?>
+    </div>
     </div>
 </body>
 </html>

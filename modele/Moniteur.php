@@ -24,19 +24,23 @@ class Moniteur {
 
     // ✅ La méthode update() doit être DANS la classe
     public function update($id, $data) {
-        $sql = "UPDATE moniteur SET 
-                nom = ?, 
-                prenom = ?, 
-                email = ?, 
-                telephone = ?";
-               
-        
+        $sql = "UPDATE moniteur SET
+                nom = ?,
+                prenom = ?,
+                email = ?,
+                telephone = ?,
+                date_embauche = ?,
+                type_permis = ?,
+                sexe = ?";
+
         $params = [
             $data['nom'],
             $data['prenom'],
             $data['email'],
             $data['telephone'],
-           
+            $data['date_embauche'] ?? null,
+            $data['type_permis'] ?? null,
+            $data['sexe'] ?? null,
         ];
 
         // Ajouter le mot de passe seulement s'il est fourni

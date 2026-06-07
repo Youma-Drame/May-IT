@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAY IT - Auto-École Professionnelle</title>
+    <title>EasyPermis - Auto-École Professionnelle</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -980,9 +980,12 @@
     <header>
         <nav>
             <a href="#" class="logo">
-                <div class="logo-icon">MI</div>
+                
+
+                <img src="images/logo.png" alt="Logo EasyPermis" style="width: 50px; height: 50px;">
+                 
                 <div class="logo-text">
-                    <h1>MAY IT</h1>
+                    <h1>EasyPermis</h1>
                     <p>Auto-École</p>
                 </div>
             </a>
@@ -997,7 +1000,7 @@
 
             <div class="nav-actions">
                 <a href="tel:0759655833" class="phone-link">
-                    📞 07 59 65 58 33
+                    📞 01 23 45 67 89
                 </a>
                 <a href="index.php?page=register" class="btn-primary">Inscription</a>
                 <a href="index.php?page=login" class="btn-secondary">Connexion</a>
@@ -1018,7 +1021,7 @@
                 </h2>
                 
                 <p>
-                    Obtenez votre permis de conduire avec MAY IT, l'auto-école qui place votre succès au cœur de ses priorités. Formations complètes et moniteurs experts.
+                    Obtenez votre permis de conduire avec EasyPermis, l'auto-école qui place votre succès au cœur de ses priorités. Formations complètes et moniteurs experts.
                 </p>
 
                 <div class="hero-actions">
@@ -1143,7 +1146,7 @@
                     <h4>À propos de nous</h4>
                     <h3>Une auto-école de confiance depuis 2025</h3>
                     <p>
-                        MAY IT est bien plus qu'une simple auto-école. Nous sommes une équipe passionnée dédiée à votre réussite. Avec un taux de réussite de 50%, nous formons chaque année des centaines de nouveaux conducteurs confiants et responsables.
+                        EasyPermis est bien plus qu'une simple auto-école. Nous sommes une équipe passionnée dédiée à votre réussite. Avec un taux de réussite de 50%, nous formons chaque année des centaines de nouveaux conducteurs confiants et responsables.
                     </p>
                     <p>
                         Notre approche pédagogique moderne, nos véhicules récents et nos moniteurs diplômés d'État garantissent une formation de qualité dans les meilleures conditions.
@@ -1259,7 +1262,7 @@
                             <div class="contact-icon">📞</div>
                             <div class="contact-method-text">
                                 <h5>Téléphone</h5>
-                                <p>07 59 65 58 33</p>
+                                <p>01 23 45 67 89</p>
                             </div>
                         </div>
 
@@ -1267,7 +1270,7 @@
                             <div class="contact-icon">✉️</div>
                             <div class="contact-method-text">
                                 <h5>Email</h5>
-                                <p>youmadrame301@gmail.com</p>
+                                <p>contact@easypermis.fr</p>
                             </div>
                         </div>
 
@@ -1322,7 +1325,7 @@
     <footer>
         <div class="footer-container">
             <div class="footer-section">
-                <h5>MAY IT Auto-École</h5>
+                <h5>EasyPermis Auto-École</h5>
                 <p style="color: rgba(255, 255, 255, 0.7); line-height: 1.7;">
                     Votre partenaire de confiance pour obtenir votre permis de conduire dans les meilleures conditions.
                 </p>
@@ -1351,15 +1354,15 @@
             <div class="footer-section">
                 <h5>Contact</h5>
                 <ul>
-                    <li><a href="tel:0759655833">07 59 65 58 33</a></li>
-                    <li><a href="mailto:youmadrame301@gmail.com">youmadrame301@gmail.com</a></li>
-                    <li>IRIS<br>75017 Paris</li>
+                    <li><a href="tel:0759655833">01 23 45 67 89 </a></li>
+                    <li><a href="mailto:youmadrame301@gmail.com">contact@easypermis.fr</a></li>
+                    <li>Paris<br>75017 Paris</li>
                 </ul>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2025 MAY IT Auto-École. Tous droits réservés.</p>
+            <p>&copy; 2025 EasyPermis Auto-École. Tous droits réservés.</p>
         </div>
     </footer>
 

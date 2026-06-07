@@ -1,3 +1,4 @@
+<?php $currentPage = 'planning'; ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -5,24 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planning des leçons</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <?php if (isset($_SESSION['moniteur'])): ?>
+        <?php include 'vue/moniteur/_sidebar_css.php'; ?>
+    <?php else: ?>
+        <?php include 'vue/admin/_sidebar_css.php'; ?>
+    <?php endif; ?>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f5f7fa;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
         .header {
             background: white;
             padding: 30px;
@@ -42,9 +31,7 @@
             gap: 12px;
         }
 
-        .header h1 i {
-            color: #6366f1;
-        }
+        .header h1 i { color: #6366f1; }
 
         .btn {
             padding: 12px 24px;
@@ -60,25 +47,8 @@
             transition: all 0.3s;
         }
 
-        .btn-primary {
-            background: #6366f1;
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: #4f46e5;
-        }
-
-        .btn-secondary {
-            background: #e5e7eb;
-            color: #374151;
-        }
-
-        .btn-back {
-            background: #f3f4f6;
-            color: #6b7280;
-            margin-bottom: 20px;
-        }
+        .btn-primary { background: #6366f1; color: white; }
+        .btn-primary:hover { background: #4f46e5; }
 
         .calendar-section {
             background: white;
@@ -95,11 +65,7 @@
             margin-bottom: 30px;
         }
 
-        .calendar-nav {
-            display: flex;
-            gap: 15px;
-            align-items: center;
-        }
+        .calendar-nav { display: flex; gap: 15px; align-items: center; }
 
         .calendar-nav button {
             padding: 10px 15px;
@@ -111,20 +77,11 @@
             font-size: 14px;
         }
 
-        .calendar-nav button:hover {
-            background: #e5e7eb;
-        }
+        .calendar-nav button:hover { background: #e5e7eb; }
 
-        .month-title {
-            font-size: 20px;
-            font-weight: 600;
-            color: #1f2937;
-        }
+        .month-title { font-size: 20px; font-weight: 600; color: #1f2937; }
 
-        .lecons-list {
-            display: grid;
-            gap: 15px;
-        }
+        .lecons-list { display: grid; gap: 15px; }
 
         .lecon-card {
             background: #f9fafb;
@@ -137,14 +94,9 @@
             transition: all 0.3s;
         }
 
-        .lecon-card:hover {
-            background: #f3f4f6;
-            transform: translateX(5px);
-        }
+        .lecon-card:hover { background: #f3f4f6; transform: translateX(5px); }
 
-        .lecon-info {
-            flex: 1;
-        }
+        .lecon-info { flex: 1; }
 
         .lecon-time {
             font-size: 14px;
@@ -153,11 +105,7 @@
             margin-bottom: 8px;
         }
 
-        .lecon-details {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
+        .lecon-details { display: flex; gap: 20px; flex-wrap: wrap; }
 
         .detail-item {
             display: flex;
@@ -167,14 +115,9 @@
             font-size: 14px;
         }
 
-        .detail-item i {
-            color: #9ca3af;
-        }
+        .detail-item i { color: #9ca3af; }
 
-        .lecon-actions {
-            display: flex;
-            gap: 10px;
-        }
+        .lecon-actions { display: flex; gap: 10px; }
 
         .btn-icon {
             padding: 8px 12px;
@@ -187,9 +130,7 @@
             transition: all 0.3s;
         }
 
-        .btn-icon:hover {
-            background: #fecaca;
-        }
+        .btn-icon:hover { background: #fecaca; }
 
         .empty-state {
             text-align: center;
@@ -197,11 +138,7 @@
             color: #9ca3af;
         }
 
-        .empty-state i {
-            font-size: 64px;
-            margin-bottom: 16px;
-            opacity: 0.3;
-        }
+        .empty-state i { font-size: 64px; margin-bottom: 16px; opacity: 0.3; }
 
         .filters {
             background: white;
@@ -214,10 +151,7 @@
             flex-wrap: wrap;
         }
 
-        .filter-group {
-            flex: 1;
-            min-width: 200px;
-        }
+        .filter-group { flex: 1; min-width: 200px; }
 
         .filter-group label {
             display: block;
@@ -238,22 +172,27 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <a href="javascript:history.back()" class="btn btn-back">
-            <i class="fas fa-arrow-left"></i> Retour
-        </a>
+    <?php if (isset($_SESSION['moniteur'])): ?>
+        <?php include 'vue/moniteur/_sidebar.php'; ?>
+    <?php else: ?>
+        <?php include 'vue/admin/_sidebar.php'; ?>
+    <?php endif; ?>
 
+    <div class="main-content">
         <div class="header">
             <h1>
                 <i class="fas fa-calendar-alt"></i>
-                Planning des leçons
+                <?= isset($_SESSION['moniteur']) ? 'Mon Planning' : 'Planning des leçons' ?>
             </h1>
+            <?php if (isset($_SESSION['admin'])): ?>
             <a href="index.php?page=ajouter-lecon" class="btn btn-primary">
                 <i class="fas fa-plus"></i> Nouvelle leçon
             </a>
+            <?php endif; ?>
         </div>
 
-        <!-- Filtres -->
+        <?php if (isset($_SESSION['admin'])): ?>
+        <!-- Filtres (admin uniquement) -->
         <div class="filters">
             <div class="filter-group">
                 <label>Date</label>
@@ -264,8 +203,8 @@
                 <select id="filter-moniteur">
                     <option value="">Tous les moniteurs</option>
                     <?php
-                    $moniteurs = $this->pdo->query("SELECT * FROM moniteur")->fetchAll();
-                    foreach ($moniteurs as $m) {
+                    $moniteursList = $this->pdo->query("SELECT * FROM moniteur")->fetchAll();
+                    foreach ($moniteursList as $m) {
                         echo "<option value='{$m['idmoniteur']}'>{$m['prenom']} {$m['nom']}</option>";
                     }
                     ?>
@@ -276,14 +215,15 @@
                 <select id="filter-candidat">
                     <option value="">Tous les candidats</option>
                     <?php
-                    $candidats = $this->pdo->query("SELECT * FROM candidat")->fetchAll();
-                    foreach ($candidats as $c) {
+                    $candidatsList = $this->pdo->query("SELECT * FROM candidat")->fetchAll();
+                    foreach ($candidatsList as $c) {
                         echo "<option value='{$c['idcandidat']}'>{$c['prenom']} {$c['nom']}</option>";
                     }
                     ?>
                 </select>
             </div>
         </div>
+        <?php endif; ?>
 
         <!-- Liste des leçons -->
         <div class="calendar-section">
@@ -327,13 +267,19 @@
                                     </div>
                                 </div>
                             </div>
+                            <?php if (isset($_SESSION['admin'])): ?>
                             <div class="lecon-actions">
-                                <a href="index.php?page=supprimer-lecon&id=<?= $lecon['idlecon'] ?>" 
+                                <a href="index.php?page=modifier-lecon&id=<?= $lecon['idlecon'] ?>"
+                                   class="btn-icon" style="background:#dbeafe;color:#1d4ed8;margin-right:6px" title="Modifier">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a href="index.php?page=supprimer-lecon&id=<?= $lecon['idlecon'] ?>"
                                    class="btn-icon"
                                    onclick="return confirm('Voulez-vous vraiment supprimer cette leçon ?')">
                                     <i class="fas fa-trash"></i>
                                 </a>
                             </div>
+                            <?php endif; ?>
                         </div>
                     <?php endforeach; ?>
                 <?php endif; ?>
@@ -342,7 +288,6 @@
     </div>
 
     <script>
-        // Filtrage basique (à améliorer avec AJAX si besoin)
         document.getElementById('filter-date').addEventListener('change', function() {
             const date = this.value;
             window.location.href = `index.php?page=planning&date=${date}`;

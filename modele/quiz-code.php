@@ -24,7 +24,7 @@ $questionsDatabase = [
             ['id' => 'C', 'texte' => 'Une obligation', 'correct' => true],
             ['id' => 'D', 'texte' => 'Une indication', 'correct' => false]
         ],
-        'explication' => 'Les panneaux ronds à fond bleu sont des panneaux d\'obligation.'
+        'explication' => 'Les panneaux ronds à fond bleu sont des panneaux d'obligation.'
     ],
     [
         'categorie' => 'Priorités',
@@ -35,7 +35,7 @@ $questionsDatabase = [
             ['id' => 'C', 'texte' => 'Au véhicule le plus rapide', 'correct' => false],
             ['id' => 'D', 'texte' => 'Au véhicule le plus lourd', 'correct' => false]
         ],
-        'explication' => 'En l\'absence de signalisation, la priorité à droite s\'applique.'
+        'explication' => 'En l'absence de signalisation, la priorité à droite s'applique.'
     ],
     [
         'categorie' => 'Vitesse',
@@ -57,7 +57,7 @@ $questionsDatabase = [
             ['id' => 'C', 'texte' => 'Arrêt et stationnement interdits', 'correct' => true],
             ['id' => 'D', 'texte' => 'Zone de livraison', 'correct' => false]
         ],
-        'explication' => 'Un trait jaune continu interdit l\'arrêt et le stationnement.'
+        'explication' => 'Un trait jaune continu interdit l'arrêt et le stationnement.'
     ],
     [
         'categorie' => 'Distance de sécurité',
@@ -72,14 +72,14 @@ $questionsDatabase = [
     ],
     [
         'categorie' => 'Alcool',
-        'question' => 'Le taux d\'alcoolémie maximal autorisé pour un conducteur confirmé est de :',
+        'question' => 'Le taux d'alcoolémie maximal autorisé pour un conducteur confirmé est de :',
         'reponses' => [
             ['id' => 'A', 'texte' => '0,2 g/L', 'correct' => false],
             ['id' => 'B', 'texte' => '0,5 g/L', 'correct' => true],
             ['id' => 'C', 'texte' => '0,8 g/L', 'correct' => false],
             ['id' => 'D', 'texte' => '1 g/L', 'correct' => false]
         ],
-        'explication' => 'Le taux maximal est de 0,5 g/L de sang (0,25 mg/L d\'air expiré).'
+        'explication' => 'Le taux maximal est de 0,5 g/L de sang (0,25 mg/L d'air expiré).'
     ],
     [
         'categorie' => 'Feux',
@@ -108,11 +108,11 @@ $questionsDatabase = [
         'question' => 'Le port de la ceinture de sécurité est obligatoire :',
         'reponses' => [
             ['id' => 'A', 'texte' => 'Uniquement sur autoroute', 'correct' => false],
-            ['id' => 'B', 'texte' => 'À l\'avant et à l\'arrière du véhicule', 'correct' => true],
-            ['id' => 'C', 'texte' => 'Uniquement à l\'avant', 'correct' => false],
+            ['id' => 'B', 'texte' => 'À l'avant et à l'arrière du véhicule', 'correct' => true],
+            ['id' => 'C', 'texte' => 'Uniquement à l'avant', 'correct' => false],
             ['id' => 'D', 'texte' => 'Seulement pour les enfants', 'correct' => false]
         ],
-        'explication' => 'Tous les occupants doivent porter leur ceinture, à l\'avant comme à l\'arrière.'
+        'explication' => 'Tous les occupants doivent porter leur ceinture, à l'avant comme à l'arrière.'
     ]
 ];
 

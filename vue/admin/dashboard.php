@@ -268,71 +268,10 @@
             background: #fee2e2;
         }
     </style>
+    <?php include 'vue/admin/_sidebar_css.php'; ?>
 </head>
 <body>
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <div class="logo">
-            <i class="fas fa-shield-alt"></i>
-            <div>
-                <div class="logo-text">May-IT</div>
-                <div class="logo-subtitle">Administration</div>
-            </div>
-        </div>
-
-        <nav class="menu">
-            <a href="index.php?page=admin" class="menu-item active">
-                <i class="fas fa-tachometer-alt"></i>
-                <span>Tableau de bord</span>
-            </a>
-            <a href="index.php?page=candidats" class="menu-item">
-                <i class="fas fa-user-graduate"></i>
-                <span>Candidats</span>
-            </a>
-            <a href="index.php?page=moniteurs-admin" class="menu-item">
-                <i class="fas fa-chalkboard-teacher"></i>
-                <span>Moniteurs</span>
-            </a>
-            <a href="index.php?page=formules" class="menu-item">
-                <i class="fas fa-tags"></i>
-                <span>Formules</span>
-            </a>
-            <a href="index.php?page=planning" class="menu-item">
-                <i class="fas fa-calendar-alt"></i>
-                <span>Planning</span>
-            </a>
-            <a href="index.php?page=vehicules" class="menu-item">
-    <i class="fas fa-car"></i>
-    <span>Véhicules</span>
-</a>
-<a href="index.php?page=questions-code" class="menu-item">
-    <i class="fas fa-question-circle"></i>
-    <span>Questions Code</span>
-</a>
-            <a href="index.php?page=paiements-admin" class="menu-item">
-                <i class="fas fa-euro-sign"></i>
-                <span>Paiements</span>
-            </a>
-            <a href="index.php?page=statistiques" class="menu-item">
-    <i class="fas fa-chart-bar"></i>
-    <span>Statistiques</span>
-</a>
-            <a href="index.php?page=logout" class="menu-item logout-btn">
-                <i class="fas fa-sign-out-alt"></i>
-                <span>Déconnexion</span>
-            </a>
-        </nav>
-
-        <div class="user-section">
-            <div class="user-avatar">
-                AD
-            </div>
-            <div class="user-info">
-                <h4>Administrateur</h4>
-                <p>Super Admin</p>
-            </div>
-        </div>
-    </div>
+    <?php include 'vue/admin/_sidebar.php'; ?>
 
     <!-- Main Content -->
     <div class="main-content">

@@ -13,7 +13,8 @@ class QuizCode {
             ORDER BY RAND() 
             LIMIT ?
         ");
-        $stmt->execute([$nombre]);
+       $stmt->bindValue(1, (int)$nombre, PDO::PARAM_INT);
+       $stmt->execute();
         return $stmt->fetchAll();
     }
 

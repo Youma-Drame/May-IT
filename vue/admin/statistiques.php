@@ -1,3 +1,4 @@
+<?php $currentPage = 'statistiques'; ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -5,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Statistiques</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <?php include 'vue/admin/_sidebar_css.php'; ?>
+    <style>.container { max-width:100%; padding: 0; background: transparent; box-shadow: none; border-radius: 0; } body { padding: 0; }</style>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         * {
@@ -230,6 +233,8 @@
     </style>
 </head>
 <body>
+    <?php include 'vue/admin/_sidebar.php'; ?>
+    <div class="main-content">
     <div class="container">
         <a href="index.php?page=admin" class="back-btn">
             <i class="fas fa-arrow-left"></i> Retour au tableau de bord
@@ -498,5 +503,6 @@
             }
         });
     </script>
+    </div>
 </body>
 </html>
